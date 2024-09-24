@@ -25,8 +25,8 @@ public class SpringBootFirstApplication {
         //this question can answer in upcoming Spring lecture
 
 
-//        Laptop lap =context.getBean(Laptop.class);
-//        lap.compile();
+        Laptop lap =context.getBean(Laptop.class);
+        lap.compile();
     }
 
 }
