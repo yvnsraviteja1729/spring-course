@@ -27,6 +27,7 @@ public class SpringBootFirstApplication {
 
         Laptop lap =context.getBean(Laptop.class);
         lap.compile();
+        System.out.println("hello world");
     }
 
 }
