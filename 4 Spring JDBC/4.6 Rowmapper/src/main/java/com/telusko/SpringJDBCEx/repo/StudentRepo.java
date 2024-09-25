@@ -40,7 +40,8 @@ public class StudentRepo {
 	//with lambda expression
 	  public List<Student> findAll() {
 		  
-		  String sql="select * from student"; RowMapper<Student> mapper=(rs,rowNum) ->
+		  String sql="select * from student";
+		  RowMapper<Student> mapper=(rs,rowNum) ->
 		  {
 			  Student s=new Student();
 			  s.setRollNo(rs.getInt("rollno"));
@@ -50,8 +51,7 @@ public class StudentRepo {
 		  
 		  }; 
 		  
-		  return jdbc.query(sql, mapper); 
-		  
+		  return jdbc.query(sql, mapper);
 		  }
 	
 	  
@@ -61,10 +61,11 @@ public class StudentRepo {
 	/*
 	 * public List<Student> findAll() {
 	 * 
-	 * String sql="select * from student"; RowMapper<Student> mapper=new
-	 * RowMapper<Student>() {
+	 * String sql="select * from student";
+	 * RowMapper<Student> mapper=new RowMapper<Student>() {
 	 * 
-	 * @Override public Student mapRow(ResultSet rs, int rowNum) throws SQLException
+	 * @Override
+	 * public Student mapRow(ResultSet rs, int rowNum) throws SQLException
 	 * { Student s=new Student(); s.setRollNo(rs.getInt("rollno"));
 	 * s.setName(rs.getString("name")); s.setMarks(rs.getInt("marks")); return s; }
 	 * }; return jdbc.query(sql, mapper); }
